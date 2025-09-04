@@ -19,6 +19,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use phpDocumentor\Reflection\PseudoTypes\True_;
 
 class ProductResource extends Resource
 {
@@ -36,8 +37,8 @@ class ProductResource extends Resource
                     TextInput::make('name')->label('Product Name'),
                     TextInput::make('sku')
                         ->label('SKU')
-                        ->unique(),
-                    TextInput::make('slug')->unique()->label('SLUG'),
+                        ->unique(ignoreRecord: true),
+                    TextInput::make('slug')->unique(ignoreRecord: true)->label('SLUG'),
                     TextInput::make('description')->label('Product Description'),
                     SpatieTagsInput::make('tags')->type('collection')->label('Tags'),
                     TextInput::make('stock')->numeric()->default('0')->label('Product Stock'),
