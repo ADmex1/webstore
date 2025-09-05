@@ -2,7 +2,7 @@
 <header
     class="z-50 flex flex-wrap w-full bg-white border-b border-gray-200 dark:bg-neutral-800 dark:border-neutral-700 md:justify-start md:flex-nowrap">
     <nav
-        class="relative max-w-[85rem] w-full md:flex md:items-center md:justify-between md:gap-3 mx-auto px-4 sm:px-6 lg:px-8 py-2 dark:bg-neutral-900">
+        class="relative max-w-[85rem] w-full md:flex md:items-center md:justify-between md:gap-3 mx-auto px-4 sm:px-6 lg:px-8 py-2 dark:bg-neutral-0">
         <!-- Logo w/ Collapse Button -->
         <div class="flex items-center justify-between">
             <a class="flex-none text-xl font-semibold text-black focus:outline-hidden focus:opacity-80 dark:text-white"
