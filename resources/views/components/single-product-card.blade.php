@@ -2,7 +2,7 @@
     href="{{ route('product') }}">
     <img class="object-cover rounded-md aspect-square" src="{{ $product->cover_url }}" alt="{{ $product->name }}" />
     <div class="py-5">
-        <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+        <h3 class="text-lg font-bold text-gray-800 dark:text-black">
             {{ $product->name }}
         </h3>
         <span class="text-sm text-gray-900">
