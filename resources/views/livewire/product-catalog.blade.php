@@ -36,12 +36,17 @@
                     @endforeach
                 </div>
                 <div class="grid grid-cols-2 mt-10">
-                    <button type="button" wire:click="applyFilter"
+                    <button type="button" wire:click="applyFilter" wire:loading.attr="disabled"
                         class="inline-flex items-center justify-center px-4 py-3 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg cursor-pointer gap-x-2 hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
                         Apply Filter
+                        <div wire:loading
+                            class="animate-spin inline-block size-4 border-3 border-current border-t-transparent text-white rounded-full dark:text-white"
+                            role="status" aria-label="loading">
+                            <span class="sr-only">Loading...</span>
+                        </div>
                     </button>
                     <button type="button" wire:click="resetFilters"
-                        class="inline-flex items-center justify-center text-sm font-semibold text-blue-600 rounded-lg cursor-pointer gap-x-2 hover:text-blue-800 focus:outline-hidden focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:text-blue-400">
+                        class="inline-flex items-center justify-center text-sm font-semibold text-gray-600 rounded-lg cursor-pointer gap-x-2 hover:text-gray-800 focus:outline-hidden focus:text-gray-800 disabled:opacity-50 disabled:pointer-events-none dark:text-gray-500 dark:hover:text-gray-400 dark:focus:text-gray-400">
                         Reset
                     </button>
                 </div>
